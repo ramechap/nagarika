@@ -1,0 +1,173 @@
+.cardContainer {
+    background-color: rgba(141, 222, 28, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .mainContent {
+    background-blend-mode: darken;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 14px 38px 34px;
+  }
+  
+  .headerSection {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .logoWrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 20%;
+  }
+  
+  .logo {
+    aspect-ratio: 1.19;
+    object-fit: contain;
+    object-position: center;
+    width: 172px;
+    max-width: 100%;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 59%;
+  }
+  
+  .titleContent {
+    display: flex;
+    margin-top: 22px;
+    flex-grow: 1;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .mainTitle {
+    font-size: 40px;
+  }
+  
+  .subtitle {
+    font-size: 36px;
+    align-self: end;
+    margin-top: 22px;
+  }
+  
+  .photoWrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 21%;
+  }
+  
+  .photoPlaceholder {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    width: 176px;
+    height: 176px;
+    margin: 0 auto;
+  }
+  
+  .detailsSection {
+    margin-top: 80px;
+    width: 100%;
+    max-width: 1325px;
+  }
+  
+  .detailsContainer {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .leftColumn {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+  }
+  
+  .registrationNumber {
+    color: rgba(0, 0, 0, 1);
+    align-self: start;
+    margin-left: 16px;
+    font: 300 29px Inter, sans-serif;
+  }
+  
+  .personalInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: rgba(0, 0, 0, 1);
+    font: 300 32px Inter, sans-serif;
+  }
+  
+  .infoLabel {
+    margin: 16px 0;
+  }
+  
+  .redText {
+    color: rgba(230, 95, 114, 1);
+  }
+  
+  .underlineText {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 991px) {
+    .mainContent {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  
+    .headerSection {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  
+    .logoWrapper,
+    .titleWrapper,
+    .photoWrapper {
+      width: 100%;
+    }
+  
+    .logo {
+      margin-top: 40px;
+    }
+  
+    .titleContent {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .detailsSection {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .detailsContainer {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  
+    .leftColumn {
+      width: 100%;
+    }
+  
+    .registrationNumber {
+      margin-left: 10px;
+    }
+  }

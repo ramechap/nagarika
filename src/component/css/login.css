@@ -1,0 +1,34 @@
+.loginicon{
+    width: 150px;
+    height: 150px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.login h3{
+    color: rgba(13, 110, 245, 0.905);
+}
+
+.login{
+  background-position: center;
+  background-size: cover;
+  background: linear-gradient(145deg, #004e9e 50%, #e4052d 95%);
+  width: 100vw;
+  height: 100vh;
+}
+
+/* .logi{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%,-50%);
+} */
+
+.form-control {
+      /* Center the text inside the input field */
+    padding-left: 10%;      /* Remove left padding to ensure placeholder is centered */
+    padding-right: 0;     /* Remove right padding */
+
+  }
+  

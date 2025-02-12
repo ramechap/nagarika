@@ -1,0 +1,160 @@
+.citizen-title{
+    color: #e65f72;
+    font-size: 16px;
+
+}
+.citizen-title>h2{
+    color: #e65f72;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.citizen-right-photo{
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+}
+.citizen-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+   
+}
+.citizen-container{
+  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    position: absolute;
+    width: 50vw;
+    margin: 100px auto;
+    background-color: yellow;
+}
+.citizen-paragraph{
+  margin-bottom: 5px;
+    text-align: center;
+}
+.citizen-paragraph>h3{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.citizen-body{
+    font-size: 12px;
+
+    justify-content: space-between;
+  
+   padding: 0 20px ;
+    display: flex;
+    flex-direction: column;
+}
+.citizen-left-title{
+    float: left;
+}
+.citizen-body-inside-img{
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    border: 3px solid black;
+}
+
+.citizen-body-inside-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.kk{
+    gap: 50px;
+}
+@media (max-width: 1028px){
+    .citizen-title{
+        color: #e65f72;
+        font-size: 14px;
+    
+    }
+    .citizen-title>h2{
+        color: #e65f72;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    
+    }
+    .citizen-right-photo{
+        border: 3px solid black;
+        width: 70px;
+        height: 70px;
+    }
+    .citizen-logo>img{
+        width: 70px;
+        height: 70px;
+    }
+    .citizen-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+       
+    }
+    .citizen-container{
+        top: 50%;
+        left: 58%;
+     
+        transform: translate(-50%,-50%);
+        align-items: center;
+        position: absolute;
+        width: 80vw;
+        margin: 0 auto;
+        background-color: yellow;
+    }
+    .citizen-paragraph{
+      margin-bottom: 5px;
+        text-align: center;
+    }
+    .citizen-paragraph>h3{
+        color: black;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .citizen-body{
+        font-size: 10px;
+    
+        justify-content: space-between;
+      
+       padding: 0 10px ;
+        display: flex;
+        flex-direction: column;
+    }
+    .citizen-left-title{
+        float: left;
+    }
+  
+    .citizen-body-inside-img{
+        margin-right: 1px;
+        width: 80px;
+        height:140px;
+        border: 3px solid black;
+    }
+    
+    .citizen-body-inside-content{
+      
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nn{
+       padding: -50px;
+      
+    }
+    .kk{
+        gap:20px;
+    }
+    .mm{
+        gap:1px;
+    }
+
+}

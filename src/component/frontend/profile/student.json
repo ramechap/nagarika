@@ -1,0 +1,122 @@
+{
+    "students": [
+      {
+        "name": "Ram Kumar Sharma",
+        "rollNumber": "123456",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 85, "grade": "A" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 88, "grade": "A" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 78, "grade": "B+" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 90, "grade": "A" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 92, "grade": "A" }
+        ]
+      },
+      {
+        "name": "Sita Rai",
+        "rollNumber": "123457",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 75, "grade": "B" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 80, "grade": "A" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 85, "grade": "A" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 88, "grade": "A" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 80, "grade": "A" }
+        ]
+      },
+      {
+        "name": "Puja Thapa",
+        "rollNumber": "123458",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 90, "grade": "A" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 85, "grade": "A" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 70, "grade": "B" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 82, "grade": "A" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 78, "grade": "B+" }
+        ]
+      },
+      {
+        "name": "Bikash Adhikari",
+        "rollNumber": "123459",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 80, "grade": "A" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 70, "grade": "B+" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 88, "grade": "A" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 78, "grade": "B+" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 85, "grade": "A" }
+        ]
+      },
+      {
+        "name": "Anita Gautam",
+        "rollNumber": "123460",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 68, "grade": "B" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 72, "grade": "B" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 74, "grade": "B" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 80, "grade": "A" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 78, "grade": "B+" }
+        ]
+      },
+      {
+        "name": "Hari Sharma",
+        "rollNumber": "123461",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 82, "grade": "A" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 79, "grade": "B+" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 70, "grade": "B" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 85, "grade": "A" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 80, "grade": "A" }
+        ]
+      },
+      {
+        "name": "Sanjay Tamang",
+        "rollNumber": "123462",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 80, "grade": "A" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 85, "grade": "A" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 65, "grade": "B" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 88, "grade": "A" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 92, "grade": "A" }
+        ]
+      },
+      {
+        "name": "Rina Yadav",
+        "rollNumber": "123463",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 88, "grade": "A" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 90, "grade": "A" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 85, "grade": "A" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 95, "grade": "A" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 80, "grade": "A" }
+        ]
+      },
+      {
+        "name": "Gita Bista",
+        "rollNumber": "123464",
+        "faculty": "Science",
+        "year": "2024",
+        "subjects": [
+          { "name": "Physics", "maxMarks": 100, "marksObtained": 65, "grade": "B" },
+          { "name": "Chemistry", "maxMarks": 100, "marksObtained": 68, "grade": "B" },
+          { "name": "Mathematics", "maxMarks": 100, "marksObtained": 74, "grade": "B" },
+          { "name": "English", "maxMarks": 100, "marksObtained": 82, "grade": "A" },
+          { "name": "Computer Science", "maxMarks": 100, "marksObtained": 88, "grade": "A" }
+        ]
+      }
+    ]
+  }
+  

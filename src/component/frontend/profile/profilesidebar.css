@@ -1,0 +1,19 @@
+.siddy{
+    z-index: 1;
+    top: 0;
+    background: linear-gradient(180deg, #004e9e 50%, #e4052d 95%);
+    margin-top: 100px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: calc(100% - 9%);
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;
+    box-shadow: 3px 0px 4px rgba(94, 92, 92, 0.908);
+
+}
+.sidelink {
+    background-color: #007bff;
+}

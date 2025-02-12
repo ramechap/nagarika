@@ -1,0 +1,92 @@
+.pan-card{
+    width: 400px;
+    margin-left: 15px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #d7e2ed;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    justify-self: center;
+}
+.pan-card-header{
+    flex-direction: row;
+    
+    background-color: transparent;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   
+   
+
+}
+.pan-card-footer {
+    background-color: transparent;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .pan-card-footer p {
+    font-size: 12px;
+    color: red;
+  }
+.pan-card-header-logo img{
+    width: 80px;
+  height: auto;
+
+
+}
+.pan-card-header-title{
+    width: 250px;
+
+}
+.pan-card-header-title h3{
+    font-size:18px;
+    text-align: center;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+  margin-bottom: 5px;
+  color: red;
+ 
+  font-weight: 800;
+}
+.pan-card-body{
+    padding: 20px;
+
+}
+.pan-card-body .personal-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+.personal-info .info p{
+    font-size: 14px;
+    line-height: 1.8;
+
+}
+.personal-info .info img{
+    justify-content: flex-end;
+    justify-items: end;
+    align-items: end;
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+}
+.pan-card-header-title p{
+ 
+    font-size:19px;
+    text-align: center;
+   
+  margin-bottom: 5px;
+  width: 80%;
+  justify-content: center;
+  margin: auto;
+
+ 
+    
+
+  background-color:rgb(12, 138, 210) ;
+  color: white;
+  font-weight: 600;
+}

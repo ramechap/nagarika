@@ -1,0 +1,11 @@
+.navvy{
+    z-index: 2;
+    position: fixed;
+     background: linear-gradient(145deg, #004e9e 50%, #e4052d 95%);;
+    padding: 20px;
+    width: calc(100% - 0%);
+    top: 0;
+    border-bottom: 2px solid rgb(183, 178, 178);
+    
+  
+}

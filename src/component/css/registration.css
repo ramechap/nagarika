@@ -1,0 +1,104 @@
+body{
+    overflow-x: hidden;
+}
+.registrationicon{
+    width: 150px;
+    height: 150px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.registration h3{
+    color: rgba(13, 110, 245, 0.905);
+}
+
+.registration{
+    overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background: linear-gradient(145deg, #004e9e 50%, #e4052d 95%);
+  width: 100vw;
+  height: 100%;
+}
+
+/* .logi{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%,-50%);
+} */
+
+.form-control {
+      /* Center the text inside the input field */
+    padding-left: 10%;      /* Remove left padding to ensure placeholder is centered */
+    padding-right: 0;     /* Remove right padding */
+
+  }
+  .custom-shape-divider-top-1734368390 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1734368390 svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 187px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1734368390 .shape-fill {
+    fill: #FA3030;
+}
+
+
+.logo-brand {
+    float: left;
+    margin: 30px 30px 0px;
+
+}
+.registration-header{
+    padding: 10px;
+    width: 100%;
+    background: linear-gradient(145deg, #004e9e 50%, #e4052d 95%);
+    position: relative; /* Relative positioning to ensure the curve is positioned correctly */
+    z-index: 1; /* Make sure the header content stays above the curve */
+    margin-bottom: 10px;
+   
+
+}
+/* Curve styling */
+.registration-header .curve {
+    position: absolute;
+    bottom: -10px; /* Position the curve below the header */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.registration-header .curve svg {
+    position: relative;
+    display: block;
+    width: 100%; /* Full width */
+    height: 75px; /* Adjust the height of the curve */
+    transform: rotateY(180deg);
+}
+.hr-blurry{
+    display: flex;
+    height: 3px;
+   
+      border-top: 1px solid rgb(92, 90, 90);
+      margin: 10px auto;
+      width: 100%;
+
+}
+.registration-header .curve .shape-fill {
+    fill: white;
+}
