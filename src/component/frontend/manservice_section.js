@@ -17,34 +17,34 @@ export default function Manyservice_section() {
           "photo": citizenship,
           "title": "Citizenship"
         },
-        {
-          "photo": malpot,
-          "title": "Malpot"
-        },
-        {
-          "photo": voterid,
-          "title": "Voters Card"
-        },
-        {
-          "photo": iropan,
-          "title": "IRD PAN"
-        },
+        // {
+        //   "photo": malpot,
+        //   "title": "Malpot"
+        // },
+        // {
+        //   "photo": voterid,
+        //   "title": "Voters Card"
+        // },
+        // {
+        //   "photo": iropan,
+        //   "title": "IRD PAN"
+        // },
         {
           "photo": board,
           "title": "+2 Details"
         },
-        {
-          "photo": policeclear,
-          "title": "Police Clearance Report"
-        },
-        {
-          "photo": loksewa,
-          "title": "Lok Sewa"
-        },
-        {
-          "photo": vehicletax,
-          "title": "Vehicle Tax"
-        }
+        // {
+        //   "photo": policeclear,
+        //   "title": "Police Clearance Report"
+        // },
+        // {
+        //   "photo": loksewa,
+        //   "title": "Lok Sewa"
+        // },
+        // {
+        //   "photo": vehicletax,
+        //   "title": "Vehicle Tax"
+        // }
       ]
     
   return (

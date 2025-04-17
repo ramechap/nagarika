@@ -33,9 +33,12 @@ export default function Route_Profile() {
         <Routes>
 
 
-          <Route exact path='/dashboard' element={<Userprofile settoogle={settoogle} toogle={toogle} />} />
-          <Route exact path='/citizenship' element={<Profilecitizenship settoogle={settoogle} toogle={toogle} />} />
+          <Route exact path='dashboard' element={<Userprofile settoogle={settoogle} toogle={toogle} />} />
+          <Route exact path='citizenship' element={<Profilecitizenship settoogle={settoogle} toogle={toogle} />} />
 
+
+
+          <Route exact path='+2-details' element={<Studentmarksheet settoogle={settoogle} toogle={toogle} />} />
 
 
 

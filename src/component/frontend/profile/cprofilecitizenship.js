@@ -1,17 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./cprofilecitizenship.css"
 import citizlogo from "../../image/rednepal.png";
 export default function Profilecitizenship(props) {
     const { toogle } = props;
-    const personalInfo = [
-        { label: 'नाम थार', value: 'बिशेष श्रेष्ठ' },
-        { label: 'जन्म स्थान', value: 'मध्यपुर थिमि' },
-        { label: 'स्थायी ठेगाना', value: 'भक्तपुर' },
-        { label: 'जन्म मिति', value: '2081/04/04' },
-        { label: 'बाबुको नाम थार', value: 'बिशेष श्रेष्ठ' },
-        { label: 'आमाको नाम थार', value: 'बिशेष श्रेष्ठ' },
-        { label: 'पति/पत्नीको नाम थार', value: 'बिशेष श्रेष्ठ' }
-    ];
+    const [userData, setUserData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/nagarik/profile', {
+          method: 'GET',
+          credentials: 'include',  // This ensures that the session cookie is sent
+        });
+
+        const data = await response.json();
+       
+
+        if (response.ok) {
+          setUserData(data);  // Set user and profile data
+        } else {
+          setError(data.error || 'Something went wrong');
+        }
+      } catch (err) {
+        setError('Error fetching data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, []);  // Empty dependency array to run this effect once when the component mounts
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
     return (
         <>
             <div style={{ width: toogle ? (100 % - "60px") : (100 % - "280px") }} className='contentu'>
@@ -43,23 +71,25 @@ export default function Profilecitizenship(props) {
 
                         </div>
                         <div className='citizen-body'>
-                            <div className='citizen-left-title'>
+                            <div className='citizen-left-title' style={{display:"flex",gap:"2px"}}>
                                 <p>ना.प्र.नं:</p>
+                                <p>{userData.profile.citizennumber}</p>
 
                             </div>
                             <div className='citizen-body-inside d-flex'>
                                 <div className='citizen-body-inside-img'>
-
+                                <img  src={`http://localhost:8000${userData.profile.image}`}
+                    alt="Profile" />
                                 </div>
                                 <div className='citizen-body-inside-content'>
                                     <div style={{justifyItems: "space-between", flexDirection: "row", flexWrap: "wrap" }} className='nn d-flex flex-wrap align-content-around'>
                                         <div style={{ }} className='d-flex flex-wrap kk align-content-around mr-auto'>
                                             <p>नाम थार</p>
-                                            <p>बिशेष श्रेष्ठ</p>
+                                            <p>{userData.profile.firstname} {userData.profile.middlename} {userData.profile.lastname}</p>
                                         </div>
                                         <div style={{ alignItems: "right",gap:"30px" }} className='mm d-flex'>
                                             <p>लिङ्ग</p>
-                                            <p>पुरुष</p>
+                                            <p>{userData.profile.gender}</p>
                                         </div>
 
                                     </div>
@@ -71,17 +101,17 @@ export default function Profilecitizenship(props) {
                                         <div className='d-grid'>
                                             <div className='mm d-flex' style={{}}>
                                                 <p>जिल्ला :</p>
-                                                <p>भक्तपुर</p>
+                                                <p>{userData.profile.borndistrict}</p>
 
                                             </div>
                                             <div className='d-flex kk' style={{gap:"50px"}}>
                                                 <div className='mm d-flex' style={{}}>
                                                     <p>म.न.पा :</p>
-                                                    <p> मध्यपुर थिमी</p>
+                                                    <p> {userData.profile.bornplace}</p>
                                                 </div>
                                                 <div className='mm d-flex' style={{}}>
                                                     <p>वार्ड नं. :</p>
-                                                    <p> २</p>
+                                                    <p> {userData.profile.bornward}</p>
 
                                                 </div>
                                             </div>
@@ -99,17 +129,17 @@ export default function Profilecitizenship(props) {
                                         <div className='d-grid'>
                                             <div className='mm d-flex'style={{}}>
                                                 <p>जिल्ला :</p>
-                                                <p>भक्तपुर</p>
+                                                <p>{userData.profile.borndistrict}</p>
 
                                             </div>
                                             <div className='d-flex nn kk' style={{gap:"50px"}}>
                                                 <div className='mm d-flex'style={{}}>
                                                     <p>म.न.पा.:</p>
-                                                    <p>मध्यपुर थिमी</p>
+                                                    <p>{userData.profile.bornplace}</p>
                                                 </div>
                                                 <div className='mm d-flex'style={{}} >
                                                     <p>वार्ड नं.</p>
-                                                    <p>२</p>
+                                                    <p>{userData.profile.bornward}</p>
 
                                                 </div>
                                             </div>
@@ -127,37 +157,37 @@ export default function Profilecitizenship(props) {
                                         </div>
                                         <div className='mm d-flex' style={{}}>
                                                 <p>साल :</p>
-                                                <p>२०८१</p>
+                                                <p>{userData.profile.dob.split("-")[0]}</p>
                                         </div>
                                         <div className='mm d-flex' style={{}}>
                                             <p>महिना :</p>
-                                            <p>०४</p>
+                                            <p>{userData.profile.dob.split("-")[1]}</p>
                                         </div>
                                         <div className='mm d-flex'     style={{}} >
                                             <p>गते :</p>
-                                            <p>०४</p>
+                                            <p>{userData.profile.dob.split("-")[2]}</p>
                                             </div>
 
                                     </div>
                                     <div style={{ justifyItems: "space-between", flexDirection: "row", flexWrap: "wrap" }} className='d-flex nn flex-wrap align-content-around'>
                                         <div style={{ }} className='d-flex kk flex-wrap align-content-around mr-auto'>
                                             <p>बाबुको नाम थार</p>
-                                            <p>बिशेष श्रेष्ठ</p>
+                                            <p>{userData.profile.father_firstname} {userData.profile.father_middlename} {userData.profile.father_lastname}</p>
                                         </div>
                                         <div style={{ alignItems: "right", gap:"30px" }} className='mm d-flex'>
-                                            <p>ना.प्र.न</p>
-                                            <p>पुरुष</p>
+                                            <p>ना.प्र.न:</p>
+                                            <p></p>
                                         </div>
 
                                     </div>
                                     <div style={{  justifyItems: "space-between", flexDirection: "row", flexWrap: "wrap" }} className='nn d-flex flex-wrap align-content-around'>
                                         <div style={{ }} className='d-flex kk flex-wrap align-content-around mr-auto'>
                                             <p>ठेगाना</p>
-                                            <p>भक्तपुर</p>
+                                            <p>{userData.profile.father_bornplace}-{userData.profile.father_bornward},{userData.profile.father_borndistrict}</p>
                                         </div>
                                         <div style={{ alignItems: "right",gap:"30px"  }} className='mm d-flex'>
                                             <p>ना.की</p>
-                                            <p>पुरुष</p>
+                                            <p>वंशज</p>
                                         </div>
 
                                     </div>
@@ -165,44 +195,44 @@ export default function Profilecitizenship(props) {
                                     <div style={{ justifyItems: "space-between", flexDirection: "row", flexWrap: "wrap" }} className='nn d-flex flex-wrap align-content-around'>
                                         <div style={{ }} className='d-flex kk flex-wrap align-content-around mr-auto'>
                                             <p>आमाको नाम थार</p>
-                                            <p>बिशेष श्रेष्ठ</p>
+                                            <p>{userData.profile.mother_firstname} {userData.profile.mother_middlename} {userData.profile.mother_lastname} </p>
                                         </div>
                                         <div style={{ alignItems: "right", gap:"30px" }} className='mm d-flex'>
-                                            <p>ना.प्र.न</p>
-                                            <p>पुरुष</p>
+                                            <p>ना.प्र.न:</p>
+                                            <p></p>
                                         </div>
 
                                     </div>
                                     <div style={{ justifyItems: "space-between", flexDirection: "row", flexWrap: "wrap" }} className='nn d-flex flex-wrap align-content-around'>
                                         <div style={{ }} className='d-flex kk flex-wrap align-content-around mr-auto'>
                                             <p>ठेगाना</p>
-                                            <p>भक्तपुर</p>
+                                            <p>{userData.profile.mother_bornplace}-{userData.profile.mother_bornward},{userData.profile.mother_borndistrict}</p>
                                         </div>
                                         <div style={{ alignItems: "right",gap:"30px"  }} className='mm d-flex'>
                                             <p>ना.की</p>
-                                            <p>पुरुष</p>
+                                            <p>वंशज</p>
                                         </div>
 
                                     </div>
                                     <div style={{ justifyItems: "space-between", flexDirection: "row", flexWrap: "wrap" }} className='nn d-flex flex-wrap align-content-around'>
                                         <div style={{ }} className='d-flex kk flex-wrap align-content-around mr-auto'>
                                             <p>पति/पत्नीको नाम थार</p>
-                                            <p>बिशेष श्रेष्ठ</p>
+                                            <p>{userData.profile.partner_firstname?userData.profile.partner_firstname:"XXX"} </p>
                                         </div>
                                         <div style={{ alignItems: "right",gap:"30px"  }} className='mm d-flex'>
                                             <p>ना.प्र.न</p>
-                                            <p>पुरुष</p>
+                                            <p></p>
                                         </div>
 
                                     </div>
                                     <div style={{ justifyItems: "space-between", flexDirection: "row", flexWrap: "wrap" }} className='nn d-flex flex-wrap align-content-around'>
                                         <div style={{ }} className='d-flex kk flex-wrap align-content-around mr-auto'>
                                             <p>ठेगाना</p>
-                                            <p>भक्तपुर</p>
+                                            <p>{userData.profile.partner_borndistrict }</p>
                                         </div>
                                         <div style={{ alignItems: "right", gap:"30px" }} className='mm d-flex'>
                                             <p>ना.की</p>
-                                            <p>पुरुष</p>
+                                            <p>{userData.profile.partner_firstname }</p>
                                         </div>
 
                                     </div>

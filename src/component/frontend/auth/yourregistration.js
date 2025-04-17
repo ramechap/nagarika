@@ -141,16 +141,14 @@ export default function CitizenYouDetailAsk(props) {
                 <h2>Personal Information</h2>
                                 <div className="form-group mb-3 position-relative">
                                    
-                                    <input
-                                        type="text"
-                                        id="firstname"
-                                        className="form-control"
-                                        placeholder="FirstName"
-                                       value={formdata.firstname}
-                                       onChange={(e)=>setformdata({...formdata,firstname:e.target.value})}
-                                       
-                                        required
-                                    />
+                                <input
+   type="text"
+   id="firstname"
+   className="form-control"
+   placeholder="First Name"
+   value={formdata.firstname}
+   onChange={(e) => setformdata({ ...formdata, firstname: e.target.value })} required
+/>
                                 </div>
                                 <div className="form-group mb-3 position-relative">
                                    
@@ -168,33 +166,55 @@ export default function CitizenYouDetailAsk(props) {
 
                                <div className="form-group mb-3 position-relative">
                                    
-                                   <input
-                                       type="text"
-                                       id="lastname"
-                                       className="form-control"
-                                       placeholder="LastName"
-                                      value={formdata.lastname}
-                                      onChange={(e)=>setformdata({...formdata,lastname:e.target.value})}
-                                      
-                                       required
-                                   />
+                               <input
+   type="text"
+   id="lastname"
+   className="form-control"
+   placeholder="Last Name"
+   value={formdata.lastname} required
+   onChange={(e) => setformdata({ ...formdata, lastname: e.target.value })}
+/>
                                </div>
                                <div className="form-group mb-3 position-relative">
-                                   
-                               <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="gender" id="male" value="male" />
-  <label class="form-check-label" for="male">Male</label>
-</div>
+    <div className="form-check form-check-inline">
+        <input
+            className="form-check-input"
+            type="radio"
+            name="gender"
+            id="male"
+            value="male"
+            checked={formdata.gender === "male"}
+            onChange={(e) => setformdata({ ...formdata, gender: e.target.value })}
+        />
+        <label className="form-check-label" htmlFor="male">Male</label>
+    </div>
 
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="gender" id="female" value="female" />
-  <label class="form-check-label" for="female">Female</label>
+    <div className="form-check form-check-inline">
+        <input
+            className="form-check-input"
+            type="radio"
+            name="gender"
+            id="female"
+            value="female"
+            checked={formdata.gender === "female"}
+            onChange={(e) => setformdata({ ...formdata, gender: e.target.value })}
+        />
+        <label className="form-check-label" htmlFor="female">Female</label>
+    </div>
+
+    <div className="form-check form-check-inline">
+        <input
+            className="form-check-input"
+            type="radio"
+            name="gender"
+            id="other"
+            value="other"
+            checked={formdata.gender === "other"}
+            onChange={(e) => setformdata({ ...formdata, gender: e.target.value })}
+        />
+        <label className="form-check-label" htmlFor="other">Other</label>
+    </div>
 </div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="gender" id="other" value="other" />
-  <label class="form-check-label" for="other">Other</label>
-</div>
-                               </div>
                                
                                <hr class="hr hr-blurry" />
                                 <h2>Birth Place</h2>

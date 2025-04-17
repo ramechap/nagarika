@@ -24,47 +24,47 @@ export default function Governmentservice_section(props) {
           ]
     
         },
-        {
-          "photo": pankta,
-          "title": "PAN Details",
-          "desc": "Link and view PAN details from IRD database",
-          "arraylist": [
-            { "listtext": "View PAN details from IRD database" },
-            { "listtext": "View history of taxes paid" },
-            { "listtext": "Apply and get new PAN Number" }
+        // {
+        //   "photo": pankta,
+        //   "title": "PAN Details",
+        //   "desc": "Link and view PAN details from IRD database",
+        //   "arraylist": [
+        //     { "listtext": "View PAN details from IRD database" },
+        //     { "listtext": "View history of taxes paid" },
+        //     { "listtext": "Apply and get new PAN Number" }
     
-          ]
+        //   ]
     
-        },
+        // },
     
-        {
-          "photo": cark,
-          "title": "Vihicle Registration System (VRS)",
-          "desc": "Link your vehicle to Nagarik App",
-          "arraylist": [
-            { "listtext": "View your vehicle details" },
-            { "listtext": "Many Update your vehicle details" },
-            { "listtext": "View your vehicle's tax paid" },
-            { "listtext": "View tax to be paid for your vehicle" },
-            { "listtext": "Pay vehicle TAX" }
+        // {
+        //   "photo": cark,
+        //   "title": "Vihicle Registration System (VRS)",
+        //   "desc": "Link your vehicle to Nagarik App",
+        //   "arraylist": [
+        //     { "listtext": "View your vehicle details" },
+        //     { "listtext": "Many Update your vehicle details" },
+        //     { "listtext": "View your vehicle's tax paid" },
+        //     { "listtext": "View tax to be paid for your vehicle" },
+        //     { "listtext": "Pay vehicle TAX" }
     
-          ]
+        //   ]
     
-        },
-        {
-          "photo": banki,
-          "title": "Nagarik Pahichan Dwar",
-          "desc": "Nagarik Pahichan Dwar communicates securely with Nagarik App Core locally, fetches data, records, and then forwards them to concerned clients securely.",
-          "arraylist": [
-            { "listtext": "Scan and open online account in banks directly." },
-            { "listtext": " Reduces OTP verifications for application" },
-            { "listtext": " Reduces KYC Verification" },
-            { "listtext": "Login with Nagarik App(On Progress)" }
+        // },
+        // {
+        //   "photo": banki,
+        //   "title": "Nagarik Pahichan Dwar",
+        //   "desc": "Nagarik Pahichan Dwar communicates securely with Nagarik App Core locally, fetches data, records, and then forwards them to concerned clients securely.",
+        //   "arraylist": [
+        //     { "listtext": "Scan and open online account in banks directly." },
+        //     { "listtext": " Reduces OTP verifications for application" },
+        //     { "listtext": " Reduces KYC Verification" },
+        //     { "listtext": "Login with Nagarik App(On Progress)" }
     
     
-          ]
+        //   ]
     
-        }
+        // }
       ]
     
   return (

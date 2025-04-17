@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../profile/profilenavbar.css"
 import { RiShieldUserLine } from "react-icons/ri";
 import nagriklogo from "../../image/nepallogo.png";
@@ -6,6 +6,68 @@ import { Link } from 'react-router-dom';
 import { IoMdSettings } from "react-icons/io";
 
 export default function Profilenavbar() {
+     const [userData, setUserData] = useState(null);
+      const [error, setError] = useState(null);
+      const [loading, setLoading] = useState(true);
+    
+      useEffect(() => {
+        const fetchProfile = async () => {
+          try {
+            const response = await fetch('http://localhost:8000/nagarik/profile', {
+              method: 'GET',
+              credentials: 'include',  // This ensures that the session cookie is sent
+            });
+    
+            const data = await response.json();
+           
+    
+            if (response.ok) {
+              setUserData(data);  // Set user and profile data
+            } else {
+              setError(data.error || 'Something went wrong');
+            }
+          } catch (err) {
+            setError('Error fetching data');
+          } finally {
+            setLoading(false);
+          }
+        };
+    
+        fetchProfile();
+      }, []);  // Empty dependency array to run this effect once when the component mounts
+    
+      if (loading) {
+        return <div>Loading...</div>;
+      }
+    
+      if (error) {
+        return <div>{error}</div>;
+      }
+
+    const LogOut=async()=>{
+        try {
+            const response = await fetch('http://localhost:8000/nagarik/logout', {
+              method: 'POST',
+              credentials: 'include', // This is important for session cookies
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            });
+        
+            const data = await response.json();
+        
+            if (response.ok) {
+              console.log(data.message); 
+              
+              window.location.href = '/citizen/login';
+            } else {
+              console.error(data.error || 'Logout failed');
+            }
+          } catch (error) {
+            console.error('Logout error:', error);
+          }
+      }
+      
     return (
         <nav  class="navbar navvy navbar-expand-lg navbar-dark bg-dark">
             <div className='navbar-header'>
@@ -20,7 +82,7 @@ export default function Profilenavbar() {
                 <ul class="navbar-nav" style={{ display: "flex", alignItems: "center", color: "white", fontSize: "25px" }}>
                     <li class="nav-item active" style={{ display: "flex", alignItems: "center" }}>
                         <RiShieldUserLine style={{ fontSize: "40px" }} />
-                        <a class="nav-link" href="#">Bibek Yadav <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">{userData.profile.firstname} {userData.profile.middlename} {userData.profile.lastname}<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
@@ -28,9 +90,7 @@ export default function Profilenavbar() {
                             
 
                             <div class="dropdown-menu" style={{alignItems:"center"}} aria-labelledby="dropdownMenuLink">
-                                <button class="dropdown-item" >Action</button>
-                                <button class="dropdown-item" >Another action</button>
-                                <button class="dropdown-item">Something else here</button>
+                                <button onClick={LogOut} type='button' class="dropdown-item" >Logout</button>
                             </div>
                         </div>
                     </li>

@@ -11,9 +11,13 @@ import {
 } from "react-router-dom";
 import "../../css/registration.css"
 export default function CitizenpartnerDetailAsk(props) {
-    const {formdata,page,setpage,setformdata}=props
-   
-   
+    const {formdata,page,setpage,setformdata,sendOtp,users,registerUser,otppverify,errorMessage,setOtp,otp}=props
+    const [phoneNumber, setPhoneNumber] = useState(formdata.phonenumber);
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+      };
     const districts={
         "districts": [
             "sindhuli",
@@ -136,7 +140,7 @@ export default function CitizenpartnerDetailAsk(props) {
                             </div>
 
 
-                            <form onSubmit={(e)=>setpage(page+1)}>
+                            <form onSubmit={(e) => e.preventDefault()}>
                             <h2>Partner's Information</h2>
                                 <div className="form-group mb-3 position-relative">
                                    
@@ -233,8 +237,25 @@ export default function CitizenpartnerDetailAsk(props) {
 
                                 {/* Submit Button */}
                                 <div className='d-flex flex-column' >
-                                <button type="submit" className="btn btn-primary btn-block">Proceed</button>
-
+                                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                                    {
+                                      
+                                      users[phoneNumber]?.otppverify ?
+                                    
+                                   <>
+                                    <input
+                                    type="text"
+                                    placeholder="Enter OTP"
+                                    value={otp}
+                                    onChange={(e) => setOtp(e.target.value)}
+                                  />
+                                  {users[phoneNumber]?.countdown > 0 && (
+            <p>Time left: {users[phoneNumber]?.countdown} seconds</p>
+          )}
+                                    <button onClick={registerUser} className="btn btn-primary btn-block">Register</button>
+                                   </>:
+                                <button onClick={sendOtp} className="btn btn-primary btn-block">SendOtp</button>
+                                    }
                                 <button onClick={()=>{setpage(page-1)}} type="button" className="btn btn-outline-primary btn-block">Back</button>
                                  <Link to="/" className='text-primary text-center'>Go To Home</Link>
                                 

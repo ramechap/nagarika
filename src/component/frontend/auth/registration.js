@@ -79,6 +79,46 @@ export default function RegistrationForm1(props) {
                             <p className="text-center d-flex mb-4">To register in the Nagarik App, citizens must use Mobile Number registered under own's name.</p>
 
                             <form onSubmit={SendTokenAuth}>
+                            <div className="form-group mb-3 position-relative">
+                                    <span
+                                        aria-disabled="true"
+                                        className="position-absolute"
+                                        style={{ top: '50%', left: '10px', transform: 'translateY(-50%)', cursor: 'pointer' }}
+                                    >
+                                        <LiaKeySolid size={20} />
+
+                                    </span>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        className="form-control"
+                                        placeholder="Email"
+                                        value={formdata.email}
+                                        onChange={(e)=>setformdata({...formdata,email:e.target.value})}
+                                       
+                                        required
+                                    />
+                                </div>
+                                {/* <div className="form-group mb-3 position-relative">
+                                    <span
+                                        aria-disabled="true"
+                                        className="position-absolute"
+                                        style={{ top: '50%', left: '10px', transform: 'translateY(-50%)', cursor: 'pointer' }}
+                                    >
+                                        <LiaKeySolid size={20} />
+
+                                    </span>
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        className="form-control"
+                                        placeholder="Enter Password"
+                                        value={formdata.password}
+                                        onChange={(e)=>setformdata({...formdata,password:e.target.value})}
+                                        
+                                        required
+                                    />
+                                </div> */}
 
                                 <div className="form-group mb-3 position-relative">
                                     <span
