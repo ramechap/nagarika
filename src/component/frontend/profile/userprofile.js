@@ -10,7 +10,7 @@ export default function Userprofile(props) {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('http://localhost:8000/nagarik/profile', {
+        const response = await fetch('https://nagarik-api.onrender.com/nagarik/profile', {
           method: 'GET',
           credentials: 'include',  // This ensures that the session cookie is sent
         });
@@ -105,7 +105,7 @@ export default function Userprofile(props) {
                 <div className="col-md-4">
                   <label htmlFor="image" className="form-label">Profile Image</label>
                   <img
-                    src={`http://localhost:8000${userData.profile.image}`}
+                    src={`https://nagarik-api.onrender.com${userData.profile.image}`}
                     alt="Profile"
                     className="form-control"
                     style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} // Add styling as needed

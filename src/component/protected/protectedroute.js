@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
   
     useEffect(() => {
       // Check session-based authentication by hitting a protected route
-      fetch('http://localhost:8000/nagarik/check-auth', {
+      fetch('https://nagarik-api.onrender.com/nagarik/check-auth', {
         credentials: 'include',  // Important: allows cookies (sessionid) to be sent
       })
         .then((res) => res.json())

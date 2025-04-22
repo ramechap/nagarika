@@ -13,7 +13,7 @@ export default function Profilenavbar() {
       useEffect(() => {
         const fetchProfile = async () => {
           try {
-            const response = await fetch('http://localhost:8000/nagarik/profile', {
+            const response = await fetch('https://nagarik-api.onrender.com/nagarik/profile', {
               method: 'GET',
               credentials: 'include',  // This ensures that the session cookie is sent
             });
@@ -46,7 +46,7 @@ export default function Profilenavbar() {
 
     const LogOut=async()=>{
         try {
-            const response = await fetch('http://localhost:8000/nagarik/logout', {
+            const response = await fetch('https://nagarik-api.onrender.com/nagarik/logout', {
               method: 'POST',
               credentials: 'include', // This is important for session cookies
               headers: {

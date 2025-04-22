@@ -31,7 +31,7 @@ export default function LoginForm() {
 
   // useEffect(() => {
   //   // Fetch the CSRF token from the backend
-  //   axios.get('http://localhost:8000/nagarik/get-csrf-token')
+  //   axios.get('https://nagarik-api.onrender.com/nagarik/get-csrf-token')
   //     .then((response) => {
   //       setCsrfToken(response.data.csrfToken);
   //     })
@@ -61,7 +61,7 @@ export default function LoginForm() {
 
     try {
       const phoneNumberWithPlus = `+977${phoneNumber}`;
-      const response = await axios.post("http://localhost:8000/nagarik/login", {
+      const response = await axios.post("https://nagarik-api.onrender.com/nagarik/login", {
         phone_number: phoneNumberWithPlus,
       }, {
         headers: {
@@ -121,7 +121,7 @@ export default function LoginForm() {
   
     try {
       const phoneNumberWithPlus = `+977${phoneNumber}`;
-      const response = await axios.post("http://localhost:8000/nagarik/verify-otp", {
+      const response = await axios.post("https://nagarik-api.onrender.com/nagarik/verify-otp", {
         phone_number: phoneNumberWithPlus,
         otp: otp,
       } , {

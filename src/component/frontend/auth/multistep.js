@@ -112,7 +112,7 @@ export default function Multistep() {
     }
     try {
       const phoneNumberWithPlus = `+977${formdata.phonenumber}`; 
-      const response = await axios.post("http://localhost:8000/nagarik/signin", {
+      const response = await axios.post("https://nagarik-api.onrender.com/nagarik/signin", {
         phone_number: phoneNumberWithPlus,
         email:formdata.email
       });
@@ -169,7 +169,7 @@ export default function Multistep() {
     try {
       const phoneNumberWithPlu= `+977${formdata.phonenumber}`; 
      
-      const respons = await axios.post("http://localhost:8000/nagarik/verify-otp", {
+      const respons = await axios.post("https://nagarik-api.onrender.com/nagarik/verify-otp", {
         phone_number: phoneNumberWithPlu,
         otp: otp,
       });
@@ -247,7 +247,7 @@ export default function Multistep() {
       }
   
       // Send the form data to your API
-      const response = await axios.post("http://localhost:8000/nagarik/create-profile", formData, {
+      const response = await axios.post("https://nagarik-api.onrender.com/nagarik/create-profile", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         },
