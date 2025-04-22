@@ -18,7 +18,7 @@ export default function Route_All() {
   return (
    
    <>
-   <BrowserRouter>
+   <BrowserRouter basename='/nagarika'>
    <Routes>
         
         <Route path="/*" element={<Route_Nagarik/>} />
