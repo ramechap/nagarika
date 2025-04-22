@@ -134,7 +134,7 @@ export default function LoginForm() {
       console.log("Navigating...");
     
       alert("Login Successfully");
-      window.location.href = "/citizen/user/dashboard";
+      window.location.href = "/nagarika/citizen/user/dashboard";
 
   
       setMessage(response.data.message);
@@ -176,7 +176,7 @@ export default function LoginForm() {
                 </div>
 
                 {/* OTP Input (Displayed after OTP is sent) */}
-                <Link to="/citizen/registration">Register An Account?</Link>
+                <Link to="/nagarika/citizen/registration">Register An Account?</Link>
                 
 
                 <div className='d-flex flex-column' >

@@ -21,10 +21,10 @@ export default function Route_All() {
    <BrowserRouter basename='/nagarika'>
    <Routes>
         
-        <Route path="/*" element={<Route_Nagarik/>} />
+        <Route path="/nagarika/*" element={<Route_Nagarik/>} />
 
         
-        <Route path="/citizen/*" element={<Route_user/>} />
+        <Route path="/nagarika/citizen/*" element={<Route_user/>} />
 
        
       </Routes>

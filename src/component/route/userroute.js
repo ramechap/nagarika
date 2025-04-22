@@ -43,12 +43,12 @@ export default function Route_user() {
       <Route exact path='/registration' element={<Multistep />} />
       <Route exact path='/token-verification' element={<TokenVerify />} />
       <Route
-        path="/user/*"
+        path="/nagarika/user/*"
         element={
           authenticated ? (
             <Route_Profile />
           ) : (
-            <Navigate to="/citizen/login" replace />
+            <Navigate to="/nagarika/citizen/login" replace />
           )
         }
       />

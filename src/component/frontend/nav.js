@@ -34,7 +34,7 @@ export default function Navbar_Nagarik(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className={`nav-item ${isActive("/")}`}>
-            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/nagarika/">Home</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link"  onClick={scrollToWork}>How it works?</Link>
@@ -43,16 +43,16 @@ export default function Navbar_Nagarik(props) {
             <Link className="nav-link" onClick={scrollToService}>Services</Link>
           </li>
           <li className={`nav-item ${isActive("/news")}`}>
-            <Link className="nav-link" to="/news">News</Link>
+            <Link className="nav-link" to="/nagarika/news">News</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" onClick={scrollToQn}>FAQS</Link>
           </li>
           <li className={`nav-item ${isActive("/contact")}`}>
-            <Link className="nav-link" to="/contact">Contact Us</Link>
+            <Link className="nav-link" to="/nagarika/contact">Contact Us</Link>
           </li>
           <li className="nav-item">
-            <Link id="nav-btn" className="nav-link" to="/citizen/login"> <IoEarthOutline /> Web App</Link>
+            <Link id="nav-btn" className="nav-link" to="/nagarika/citizen/login"> <IoEarthOutline /> Web App</Link>
           </li>
         </ul>
       </div>

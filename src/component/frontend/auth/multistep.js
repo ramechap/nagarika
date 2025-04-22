@@ -255,7 +255,7 @@ export default function Multistep() {
       
      
       alert("Registration Successful!");
-      navigate("/citizen/user/dashboard")
+      navigate("/nagarika/citizen/user/dashboard")
     } catch (error) {
       // console.error("Error registering user:", error);
       setErrorMessage(`Registration failed: ${error.message || "Please try again."}`);

@@ -59,7 +59,7 @@ export default function Profilesidebar(props) {
   <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
     <li className="nav-item">
       <Link
-        to="/citizen/user/dashboard"
+        to="/nagarika/citizen/user/dashboard"
         className="nav-link active py-3 border-bottom"
         aria-current="page"
         title=""
@@ -73,7 +73,7 @@ export default function Profilesidebar(props) {
     </li>
     <li>
       <Link
-        to="/citizen/user/citizenship"
+        to="/nagarika/citizen/user/citizenship"
         className="nav-link py-3 border-bottom"
         title=""
         data-bs-toggle="tooltip"
@@ -86,7 +86,7 @@ export default function Profilesidebar(props) {
     </li>
     <li>
       <Link
-        to="/citizen/user/+2-details"
+        to="/nagarika/citizen/user/+2-details"
         className="nav-link py-3 border-bottom"
         title=""
         data-bs-toggle="tooltip"
@@ -115,19 +115,19 @@ style={{ width: "280px",height:"100vh" ,position:"fixed"}}
 <hr />
 <ul className="nav nav-pills flex-column mb-auto">
   <li className="nav-item">
-    <Link to="/citizen/user/dashboard" className={`nav-link  text-white  ${isActive("/citizen/user/dashboard")} `} aria-current="page">
+    <Link to="/nagarika/citizen/user/dashboard" className={`nav-link  text-white  ${isActive("/citizen/user/dashboard")} `} aria-current="page">
     <MdDashboard style={{width:"30px",height:"30px",marginRight:"5px"}} />
     Dashboard
     </Link>
   </li>
   <li>
-    <Link to="/citizen/user/citizenship" className={`nav-link  text-white ${isActive("/citizen/user/citizenship")}  `}>
+    <Link to="/nagarika/citizen/user/citizenship" className={`nav-link  text-white ${isActive("/citizen/user/citizenship")}  `}>
      <img src={citizicon} style={{width:"30px",height:"30px",marginRight:"5px"}}/>
       Citizenship
     </Link>
   </li>
   <li>
-    <Link to="/citizen/user/+2-details" className={`nav-link  text-white ${isActive("/citizen/user/+2-details")}  `}>
+    <Link to="/nagarika/citizen/user/+2-details" className={`nav-link  text-white ${isActive("/citizen/user/+2-details")}  `}>
     <img src={ss} style={{width:"30px",height:"30px",marginRight:"5px"}}/>
 
       +2 Detail
