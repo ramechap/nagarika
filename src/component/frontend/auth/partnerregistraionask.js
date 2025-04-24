@@ -257,7 +257,7 @@ export default function CitizenpartnerDetailAsk(props) {
                                 <button onClick={sendOtp} className="btn btn-primary btn-block">SendOtp</button>
                                     }
                                 <button onClick={()=>{setpage(page-1)}} type="button" className="btn btn-outline-primary btn-block">Back</button>
-                                 <Link to="/nagarika/" className='text-primary text-center'>Go To Home</Link>
+                                 <Link to="/" className='text-primary text-center'>Go To Home</Link>
                                 
 
                                 </div>

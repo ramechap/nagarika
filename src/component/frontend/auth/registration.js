@@ -147,7 +147,7 @@ export default function RegistrationForm1(props) {
                                 <div className='d-flex flex-column' >
                                 <button type="submit" className="btn btn-primary btn-block">Proceed</button>
 
-                                    <Link to="/nagarika/" className='text-primary text-center'>Go To Home</Link>
+                                    <Link to="/" className='text-primary text-center'>Go To Home</Link>
                                 </div>
                             </form>
                         </div>

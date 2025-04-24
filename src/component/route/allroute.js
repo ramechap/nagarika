@@ -18,13 +18,13 @@ export default function Route_All() {
   return (
    
    <>
-   <BrowserRouter basename='/nagarika'>
+   <BrowserRouter >
    <Routes>
         
-        <Route path="/nagarika/*" element={<Route_Nagarik/>} />
+        <Route path="/*" element={<Route_Nagarik/>} />
 
         
-        <Route path="/nagarika/citizen/*" element={<Route_user/>} />
+        <Route path="/citizen/*" element={<Route_user/>} />
 
        
       </Routes>

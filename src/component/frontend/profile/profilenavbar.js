@@ -13,6 +13,7 @@ export default function Profilenavbar() {
       useEffect(() => {
         const fetchProfile = async () => {
           try {
+            
             const response = await fetch('https://nagarik-api.onrender.com/nagarik/profile', {
               method: 'GET',
               credentials: 'include',  // This ensures that the session cookie is sent

@@ -165,13 +165,25 @@ export default function Multistep() {
 
   const [message, setMessage] = useState("");
   const verifyOtp = async () => {
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    const csrfTokenFromCookie = getCookie("csrftoken");
     // console.log("Sending OTP data:", { phone_number: formdata.phonenumber, otp: otp });  // Log data
     try {
       const phoneNumberWithPlu= `+977${formdata.phonenumber}`; 
      
-      const respons = await axios.post("https://nagarik-api.onrender.com/nagarik/verify-otp", {
+      const response = await axios.post("https://nagarik-api.onrender.com/nagarik/verify-otp", {
         phone_number: phoneNumberWithPlu,
         otp: otp,
+      } , {
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRFToken": csrfTokenFromCookie,
+        },
+        withCredentials: true,  // This ensures the session is sent with the request
       });
       // console.log(respons);  // Log the response from the server
       alert("OTP verified");
@@ -255,7 +267,7 @@ export default function Multistep() {
       
      
       alert("Registration Successful!");
-      navigate("/nagarika/citizen/user/dashboard")
+      navigate("/citizen/user/dashboard")
     } catch (error) {
       // console.error("Error registering user:", error);
       setErrorMessage(`Registration failed: ${error.message || "Please try again."}`);

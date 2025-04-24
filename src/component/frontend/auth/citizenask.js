@@ -216,7 +216,7 @@ export default function CitizenAsk(props) {
                                 <button type="submit" className="btn btn-primary btn-block">Proceed</button>
 
                                 <button onClick={()=>{setpage(page-1)}} type="button" className="btn btn-outline-primary btn-block">Back</button>
-                                 <Link to="/nagarika/" className='text-primary text-center'>Go To Home</Link>
+                                 <Link to="/" className='text-primary text-center'>Go To Home</Link>
                                 
 
                                 </div>

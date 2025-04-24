@@ -1,10 +1,10 @@
 {
     "students": [
       {
-        "name": "Ram Kumar Sharma",
-        "rollNumber": "123456",
+        "name": "Dipika Prajapati",
+        "rollNumber": "22601745",
         "faculty": "Science",
-        "year": "2024",
+        "year": "2021",
         "subjects": [
           { "name": "Physics", "maxMarks": 100, "marksObtained": 85, "grade": "A" },
           { "name": "Chemistry", "maxMarks": 100, "marksObtained": 88, "grade": "A" },

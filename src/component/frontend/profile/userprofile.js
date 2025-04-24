@@ -116,7 +116,7 @@ export default function Userprofile(props) {
                 <div className="col-md-4">
                   <label htmlFor="frontimage" className="form-label">Front Image</label>
                   <img
-                    src={`http://localhost:8000${userData.profile.frontimage}`}
+                    src={`https://nagarik-api.onrender.com${userData.profile.frontimage}`}
                     alt="Front Image"
                     className="form-control"
                     style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} // Add styling as needed
@@ -124,7 +124,7 @@ export default function Userprofile(props) {
                 <div className="col-md-4">
                   <label htmlFor="backimage" className="form-label">Back Image</label>
                   <img
-                    src={`http://localhost:8000${userData.profile.backimage}`}
+                    src={`https://nagarik-api.onrender.com${userData.profile.backimage}`}
                     alt="Back Image"
                     className="form-control"
                     style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} // Add styling as needed

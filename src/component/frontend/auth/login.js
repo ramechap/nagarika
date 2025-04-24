@@ -118,23 +118,30 @@ export default function LoginForm() {
   };
   const [message, setMessage] = useState("");
   const verifyOtp = async () => {
-  
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    const csrfTokenFromCookie = getCookie("csrftoken");
+    
     try {
       const phoneNumberWithPlus = `+977${phoneNumber}`;
       const response = await axios.post("https://nagarik-api.onrender.com/nagarik/verify-otp", {
         phone_number: phoneNumberWithPlus,
         otp: otp,
       } , {
-        // headers: {
-        //   'X-CSRFToken': csrfToke,  // Include CSRF token in headers
-        // },
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRFToken": csrfTokenFromCookie,
+        },
         withCredentials: true,  // This ensures the session is sent with the request
       });
   
       console.log("Navigating...");
     
       alert("Login Successfully");
-      window.location.href = "/nagarika/citizen/user/dashboard";
+      window.location.href = "/citizen/user/dashboard";
 
   
       setMessage(response.data.message);
@@ -176,7 +183,7 @@ export default function LoginForm() {
                 </div>
 
                 {/* OTP Input (Displayed after OTP is sent) */}
-                <Link to="/nagarika/citizen/registration">Register An Account?</Link>
+                <Link to="/citizen/registration">Register An Account?</Link>
                 
 
                 <div className='d-flex flex-column' >

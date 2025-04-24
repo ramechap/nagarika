@@ -12,7 +12,10 @@ export default function Route_user() {
 
   useEffect(() => {
     // Check session-based authentication by hitting a protected route
+   
+    
     fetch('https://nagarik-api.onrender.com/nagarik/check-auth', {
+      method: "GET",
       credentials: 'include',  // Important: allows cookies (sessionid) to be sent
     })
       .then((res) => res.json())
@@ -43,12 +46,12 @@ export default function Route_user() {
       <Route exact path='/registration' element={<Multistep />} />
       <Route exact path='/token-verification' element={<TokenVerify />} />
       <Route
-        path="/nagarika/user/*"
+        path="/user/*"
         element={
           authenticated ? (
             <Route_Profile />
           ) : (
-            <Navigate to="/nagarika/citizen/login" replace />
+            <Navigate to="/citizen/login" replace />
           )
         }
       />
